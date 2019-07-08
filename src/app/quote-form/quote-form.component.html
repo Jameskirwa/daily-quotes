@@ -1,0 +1,21 @@
+<div class="container-fluid">
+  <h3>Todays Quote</h3>
+  <form action="" #goalForm='ngForm' name="goalForm" (ngSubmit)="submit()" >
+    <p *ngIf="description.invalid ||author.invalid ||submittedBy.invalid " class="text-warning">Touch a life with a quote</p>
+
+    <div class="form-group">
+      <label for="quote">Quote</label>
+      <textarea type="text" #description='ngModel' required placeholder="Yor Quote" class="form-control" name="description" [(ngModel)]='newQuote.description'></textarea>
+    </div>
+    <div class="form-group">
+      <label for="quote">Author</label>
+      <input type="text" required placeholder="Authors name" #author='ngModel' class="form-control"name="author" [(ngModel)]='newQuote.author'>
+    </div>
+    <div class="form-group">
+      <label for="quote">Submitted By</label>
+      <input type="text" required placeholder="Enter Your name" #submittedBy='ngModel' class="form-control" name="submittedBy" [(ngModel)]='newQuote.submittedBy'>
+    </div>
+    <button type="submit" [disabled]="description.invalid ||author.invalid ||submittedBy.invalid " class="btn-outline-dark">Create Quote</button>
+
+  </form>
+</div>

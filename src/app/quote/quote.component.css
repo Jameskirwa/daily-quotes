@@ -1,0 +1,180 @@
+h1 {
+  color: rgb(255, 255, 255);
+  text-shadow: 0 0 10px white;
+  background: rgba(121, 99, 5, 0.4);
+}
+
+.intro {
+
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  padding: 5% 0;
+}
+
+.intro div {
+  display: block;
+  color: black;
+  /* margin: 2% 0; */
+  padding: 10% 20px;
+  width: 700px;
+  max-width: 100;
+  background: white;
+  text-align: left;
+}
+
+.intro .new-quote {
+  width: 100%;
+  max-width: 100%;
+  padding: 0px 0px;
+  background: rgb(199, 114, 2);
+}
+
+
+.quote-section {
+  background: hsla(138, 99%, 48%, 0.902);
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  padding-top: 5px;
+}
+
+.quotes-cont {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  width: 100%;
+}
+
+.quotes {
+  padding: 10px;
+  margin: 5px 0;
+  width: 40%;
+  box-shadow: 0 0 5px rgb(41, 37, 228);
+  position: relative;
+  
+}
+
+.quotes button {
+  margin-top: 10px;
+  padding: 1px 10px;
+}
+
+.quote-desc span {
+  font-style: italic;
+  font-weight: bold;
+  font-size: 0.9em;
+
+}
+
+.high-cont {
+  background: rgba(235, 33, 208, 0.9);
+  width: 100%;
+}
+
+.high-quote {
+  padding: 5px 5px;
+  margin: 10px 0;
+  width: 40%;
+  box-shadow: 0 0 40px rgb(255, 207, 144);
+  position: relative;
+  left: 40%;
+  transform: translate(-50%);
+  opacity: 1;
+  animation: show 1.2s linear 1;
+}
+@keyframes show{
+  0%{opacity: 0;transform: translateY(100%) translateX(-50%) scale(0.9);}
+  30%{opacity: 1;}
+  50%{opacity: 0;transform: translateY(-10%)  translate(-50%) scale(0.9);}
+  90%{opacity: 1;} 
+}
+
+.high-quote h5 {
+  color: white;
+  text-align: center;
+  text-transform: uppercase;
+  margin-top: 2px;
+}
+
+.high-quote .votes {
+  background: rgba(255, 255, 255, 0.459);
+  margin-top: 1px;
+  height: 35px;
+  padding: 5px 10px;
+
+}
+
+.date {
+  position: absolute;
+  right: 15px;
+  top: 5px;
+  font-size: 0.9em;
+}
+
+.votes {
+  max-width: 200px;
+  height: 25px;
+  float: right;
+  z-index: 200;
+}
+
+.votes>span {
+  display: inline-block;
+  font-size: 0.7em;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 1s ease;
+  margin-left: 8px;
+  padding: 2px 2px;
+}
+.votes>span:active{
+  box-shadow: 0 0 20px white;
+  transition: all 0s ease;
+  border-radius: 10px 10px 10px 10pxpx;
+}
+
+.votes>span>span {
+  background: rgba(255, 255, 255, 0.781);
+  padding: 1px 4px;
+  border-radius: 10px 10px 10px 10pxpx;
+  margin-left: 5px;
+}
+
+.votes>span .dn {
+  background: rgba(255, 0, 0, 0.884);
+  color: white;
+}
+
+.votes i {
+  display: inline-block;
+  cursor: pointer;
+  color: white;
+  transition: all 0.1s ease-out;
+}
+
+.votes i:hover {
+  transform: scale(1.2);
+  box-shadow: 15px 15px 10px rgba(255, 255, 255, 0.527);
+}
+
+.votes i:active {
+  box-shadow: 3px 4px 14px rgba(255, 255, 255);
+  transform: scale(1);
+}
+
+/*---------------------------------------------------
+              MEDIA QUERIES
+---------------------------------------------------*/
+@media only screen and (max-width: 500px) {
+  .quotes {
+    width: 100%;
+    
+    box-shadow: none;
+    border-top: 1px solid #e0f00866;
+  }
+
+  .high-quote {
+    width: 100%;
+  }
+}

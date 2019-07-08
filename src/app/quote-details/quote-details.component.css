@@ -1,0 +1,59 @@
+.quote-details {
+  box-shadow: 5px -5px 5px rgba(255, 255, 255, 0.4);
+}
+
+.btns {
+  position: relative;
+}
+
+button {
+  background: rgb(194, 1, 1);
+  padding: 1px 10px;
+
+}
+
+.hide {
+  margin-right: 10px;
+  background: greenyellow;
+}
+
+.votes {
+  max-width: 100%px;
+  z-index: 100%;
+}
+
+.votes img {
+  height: 40px;
+}
+
+.votes span {
+  display: inline-block;
+  margin: 5px;
+  margin-right: 5px;
+  padding: 1px 5px;
+  background: rgba(255, 255, 255, 0.781);
+  border-radius: 20px;
+  font-size: 0.8em;
+  font-weight: bold;
+}
+
+.votes .dn {
+  background: rgba(255, 0, 0, 0.884);
+  color: white;
+}
+
+.votes img {
+  display: inline-block;
+  cursor: pointer;
+  transition: all 0.1s ease-out;
+}
+
+.votes img:hover {
+  transform: scale(1.2);
+  box-shadow: 10px 10px 10px rgba(255, 255, 255, 0.527);
+}
+
+.votes img:active {
+  box-shadow: 0px 0px 10px rgba(255, 255, 255);
+  transform: scale(1);
+}

@@ -1,0 +1,57 @@
+<h1 class="text-center">Inspired mind inspires</h1>
+<section class="intro container ">
+  <div>
+
+    <p>
+        <img src="https://beinspiredchannel.com/wp-content/uploads/2017/07/20245683_870669053100069_1229371969697527984_n.jpg " width="600px" height="600px">
+        
+    </p>
+
+  </div>
+  <div class="new-quote">
+    <app-quote-form (quoteUpdate)='addQuote($event)'></app-quote-form>
+  </div>
+</section>
+
+<section class="quote-section">
+  <h3> MOTIVATIONAL QUOTES</h3>
+  <div class="high-cont" *ngFor="let quote of quotes; let i = index; let j = index;">
+
+    <div class="high-quote" appHighestVote *ngIf='quote.upVote == highest() && highest() > 0'>
+      <h5>Highest as voted by you</h5>
+      <p></p><br>
+      <p class="date">{{quote.setDate | date}}</p>
+      <p class="quote-desc">{{quote.description}}<br> <span>...{{quote.author}}</span></p>
+      <div class="votes">
+        <span (click)='upVoter(i);highest();'>
+          <i class="far fa-thumbs-up"></i>Up<span>{{quote.upVote}}</span>
+        </span>
+        <span (click)='dnVoter(i)'>
+          <i class="far fa-thumbs-down"></i>Dn<span class="dn">{{quote.dnVote}}</span>
+        </span>
+      </div>
+    </div>
+  </div>
+  <div class="quotes-cont">
+    <div class="quotes" *ngFor="let quote of quotes; let i = index;let j = index;">
+      <p></p><br>
+      <p class="date">{{quote.setDate | date}}</p>
+      <p class="quote-desc">{{quote.description}}<br> <span>...{{quote.author}}</span></p>
+
+      <app-quote-details *ngIf='quote.showDescription' [quote]='quote' [showDesc]='showDesc(i)'
+        (quoteDelete)='deleteQuote($event, i)'></app-quote-details>
+    
+      <div class="votes">
+        <span (click)='upVoter(i);highest();'>
+          <i class="far fa-thumbs-up"></i>Up<span>{{quote.upVote}}</span>
+        </span>
+        <span (click)='dnVoter(i)'>
+          <i class="far fa-thumbs-down"></i>Dn<span class="dn">{{quote.dnVote}}</span>
+        </span>
+      </div>
+      <div *ngIf='quote.showBtn'>
+        <button (click)='showDesc(i)'>Description</button>
+      </div>
+    </div>
+  </div>
+</section>
