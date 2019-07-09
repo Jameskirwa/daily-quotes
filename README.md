@@ -23,11 +23,11 @@ ng -version
 
 ## Installing
 
-Clone the repository to your local machine from the **[online repository](https://github.com/ArnoldOduma/quotes.git)**
+Clone the repository to your local machine from the*
 
 If you already have git and angular installed in your machine continue to the next step,
 
-if not go to [git-scm.com](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git) to learn how to install git.
+if not go  to learn how to install git.
 
 [Angular Getting started](https://angular.io)To learn how to install angular
 
